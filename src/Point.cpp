@@ -1,6 +1,4 @@
 #include <iostream>
-#include <string>
-#include <string.h>
 #include "Point.h"
 #include "line_segment.h"
 
@@ -10,7 +8,7 @@ Point::Point() {    //default constructor
   name = "origin";
   segment = NULL;
 }
-Point::Point(double x, double y, string str) {    //conversion constructor
+Point::Point(double x, double y, std::string str) {    //conversion constructor
   xCoord = x;
   yCoord = y;
   name = str;
@@ -27,7 +25,7 @@ double Point::getY() const {
 line_segment* Point::get_line_segment() const {
 	return segment;
 }
-string Point::getName() const {
+std::string Point::getName() const {
   return name;
 }
 void Point::setX(double x) {
@@ -36,7 +34,7 @@ void Point::setX(double x) {
 void Point::setY(double y) {
   yCoord = y;
 }
-void Point::setName(string str) {
+void Point::setName(std::string str) {
   name = str;
 }
 void Point::set_line_segment(line_segment* line) {
